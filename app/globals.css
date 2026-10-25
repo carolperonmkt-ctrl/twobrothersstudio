@@ -1,0 +1,30 @@
+:root { --bg:#faf8f5; --fg:#1d1b19; --muted:#7a746c; --line:#e6e1d9; --card:#fff; --brand:#e8590c; --ok:#2b8a3e; --bad:#c92a2a; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#161412; --fg:#f2eee8; --muted:#a39b90; --line:#2e2a26; --card:#201d1a; --brand:#ff8a4c; --ok:#69db7c; --bad:#ff8787; }
+}
+* { box-sizing: border-box; }
+body { margin:0; font:15px/1.5 system-ui,sans-serif; background:var(--bg); color:var(--fg); }
+a { color:inherit; }
+nav { display:flex; gap:4px; flex-wrap:wrap; align-items:center; padding:12px 16px; border-bottom:1px solid var(--line); background:var(--card); }
+nav b { margin-right:12px; }
+nav a { padding:6px 10px; border-radius:8px; text-decoration:none; color:var(--muted); }
+nav a:hover { background:var(--bg); color:var(--fg); }
+main { max-width:1000px; margin:0 auto; padding:24px 16px 64px; }
+h1 { font-size:22px; margin:0 0 16px; }
+h2 { font-size:16px; margin:24px 0 8px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; }
+.row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.muted { color:var(--muted); font-size:13px; }
+.tag { display:inline-block; font-size:12px; padding:1px 8px; border-radius:99px; border:1px solid var(--line); color:var(--muted); }
+.ok { color:var(--ok); } .bad { color:var(--bad); }
+form.stack { display:grid; gap:12px; }
+label { display:grid; gap:4px; font-size:13px; color:var(--muted); }
+input, select, textarea { font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--fg); width:100%; }
+input[type=checkbox] { width:auto; }
+button, .btn { font:inherit; padding:8px 14px; border:0; border-radius:8px; background:var(--brand); color:#fff; cursor:pointer; text-decoration:none; display:inline-block; }
+button.ghost { background:transparent; color:var(--muted); border:1px solid var(--line); }
+table { width:100%; border-collapse:collapse; }
+td, th { text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+.chk { display:flex; gap:8px; align-items:center; color:var(--fg); font-size:14px; }
+@media (max-width:600px) { main { padding:16px 12px 48px; } }
